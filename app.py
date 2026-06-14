@@ -11,6 +11,9 @@ import numpy as np
 import random
 import os
 from flask import jsonify
+from dotenv import load_dotenv
+
+load_dotenv()
 
 
 
