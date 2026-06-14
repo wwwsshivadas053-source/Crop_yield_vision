@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gradient-to-br
+from-emerald-300 via-sky-200 to-yellow-200">
+
+<div class="flex w-[800px] shadow-lg rounded-lg overflow-hidden">
+
+<!-- LEFT PANEL -->
+<div class="bg-gradient-to-br from-emerald-700 via-green-500 to-yellow-300
+text-white w-1/2 p-10 flex flex-col justify-between shadow-2xl">
+    <div>
+        <h2 class="text-3xl font-bold mb-4">Register</h2>
+        <p class="text-sm">
+            Join YieldVision to predict crop yield, monitor soil,
+            and make smarter farming decisions.
+        </p>
+    </div>
+
+    <img src="../static/growth.png" class="w-30 mx-auto">
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="bg-white w-1/2 p-10">
+
+<form action="/register" method="POST" class="space-y-6">
+
+<input type="text" name="name" placeholder="Enter Name"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2" required>
+
+<input type="email" name="email" placeholder="Enter Email"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2" required>
+
+<input type="number" name="phone_number" placeholder="Enter Phone number" minlength="1" maxlength="10" required
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2">
+
+<input type="password" name="password" placeholder="Enter Password"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2" required>
+
+<input type="password" name="comfirm_password" placeholder="Enter comfirm-Password"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2" required>
+
+<button class="bg-yellow-400 w-full py-3 font-bold rounded hover:bg-yellow-500">
+Register
+</button>
+
+</form>
+
+<p class="text-center text-sm mt-6">
+Already have an account?
+<a href="{{ url_for('login') }}" class="text-blue-600 font-bold">
+Login
+</a>
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

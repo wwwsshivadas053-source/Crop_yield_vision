@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Predictions</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex">
+
+<div class="w-72 min-h-screen bg-green-800 text-white">
+
+<div class="p-6 text-3xl font-bold">
+🌱 YieldVision
+</div>
+
+<nav class="p-5">
+
+<a href="/admin/dashboard" class="block p-3 rounded hover:bg-green-900">
+Dashboard
+</a>
+
+<a href="/admin/users" class="block p-3 rounded hover:bg-green-900">
+Users
+</a>
+
+<a href="/admin/predictions" class="block p-3 rounded bg-green-900">
+Predictions
+</a>
+
+<a href="/admin/feedback" class="block p-3 rounded hover:bg-green-900">
+Feedback
+</a>
+
+<a href="/admin/logout" class="block p-3 mt-10 bg-red-600 rounded">
+Logout
+</a>
+
+</nav>
+
+</div>
+
+<div class="flex-1 p-8">
+
+<h1 class="text-4xl font-bold mb-6">
+Prediction History
+</h1>
+
+<div class="bg-white rounded-2xl shadow overflow-auto">
+
+<table class="w-full">
+
+<thead class="bg-green-700 text-white">
+
+<tr>
+
+<th class="p-3">Email</th>
+<th class="p-3">Crop</th>
+<th class="p-3">Soil</th>
+<th class="p-3">Temperature</th>
+<th class="p-3">Rainfall</th>
+<th class="p-3">Fertilizer</th>
+<th class="p-3">Yield</th>
+<th class="p-3">Date</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for row in predictions %}
+
+<tr class="border-b">
+
+<td class="p-3">{{ row.user_email }}</td>
+<td class="p-3">{{ row.crop }}</td>
+<td class="p-3">{{ row.soil }}</td>
+<td class="p-3">{{ row.temperature }}</td>
+<td class="p-3">{{ row.rainfall }}</td>
+<td class="p-3">{{ row.fertilizer }}</td>
+<td class="p-3">{{ row.predicted_yield }}</td>
+<td class="p-3">{{ row.created_at }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>

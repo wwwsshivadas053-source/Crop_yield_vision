@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YieldVision Admin Dashboard</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+    <!-- SIDEBAR -->
+
+    <aside class="w-72 bg-gradient-to-b from-green-800 via-green-700 to-green-600 text-white shadow-2xl">
+
+        <div class="p-6 border-b border-green-500">
+
+            <h1 class="text-3xl font-bold">
+                🌱 YieldVision
+            </h1>
+
+            <p class="text-green-100 mt-2">
+                Admin Panel
+            </p>
+
+        </div>
+
+        <nav class="p-5">
+
+            <ul class="space-y-4">
+
+                <li>
+                    <a href="/admin/dashboard"
+                    class="flex items-center gap-3 p-3 rounded-lg bg-green-900 hover:bg-green-950">
+
+                        <i class="fa-solid fa-chart-line"></i>
+                        Dashboard
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/users"
+                    class="flex items-center gap-3 p-3 rounded-lg hover:bg-green-900">
+
+                        <i class="fa-solid fa-users"></i>
+                        Users
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/predictions"
+                    class="flex items-center gap-3 p-3 rounded-lg hover:bg-green-900">
+
+                        <i class="fa-solid fa-seedling"></i>
+                        Predictions
+
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/admin/feedback"
+                    class="flex items-center gap-3 p-3 rounded-lg hover:bg-green-900">
+
+                        <i class="fa-solid fa-comments"></i>
+                        Feedback
+
+                    </a>
+                </li>
+
+                <li class="pt-10">
+
+                    <a href="/admin/logout"
+                    class="flex items-center gap-3 p-3 rounded-lg bg-red-600 hover:bg-red-700">
+
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        Logout
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+
+    <main class="flex-1 p-8">
+
+        <!-- HEADER -->
+
+        <div class="flex justify-between items-center mb-8">
+
+            <div>
+
+                <h2 class="text-4xl font-bold text-gray-800">
+                    Dashboard
+                </h2>
+
+                <p class="text-gray-500">
+                    Welcome Admin
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- STATS -->
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h4 class="text-gray-500">
+                    Total Users
+                </h4>
+
+                <h2 class="text-4xl font-bold text-green-600">
+                    {{ total_users }}
+                </h2>
+
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h4 class="text-gray-500">
+                    Predictions
+                </h4>
+
+                <h2 class="text-4xl font-bold text-blue-600">
+                    {{ total_predictions }}
+                </h2>
+
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h4 class="text-gray-500">
+                    Feedback
+                </h4>
+
+                <h2 class="text-4xl font-bold text-yellow-500">
+                    {{ total_feedback }}
+                </h2>
+
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h4 class="text-gray-500">
+                    Avg Yield
+                </h4>
+
+                <h2 class="text-4xl font-bold text-purple-600">
+                    {{ avg_yield }}
+                </h2>
+
+            </div>
+
+        </div>
+
+        <!-- CHARTS -->
+
+        <div class="grid lg:grid-cols-2 gap-8 mb-8">
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h3 class="text-xl font-bold mb-4">
+                    Prediction Trends
+                </h3>
+
+                <canvas id="predictionChart"></canvas>
+
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl shadow">
+
+                <h3 class="text-xl font-bold mb-4">
+                    Crop Distribution
+                </h3>
+
+                <canvas id="cropChart"></canvas>
+
+            </div>
+
+        </div>
+
+        <!-- RECENT PREDICTIONS -->
+
+        <div class="bg-white rounded-2xl shadow p-6">
+
+            <div class="flex justify-between items-center mb-4">
+
+                <h3 class="text-2xl font-bold">
+                    Recent Predictions
+                </h3>
+
+            </div>
+
+            <div class="overflow-x-auto">
+
+                <table class="w-full">
+
+                    <thead>
+
+                    <tr class="bg-green-700 text-white">
+
+                        <th class="p-3">Email</th>
+                        <th class="p-3">Crop</th>
+                        <th class="p-3">Soil</th>
+                        <th class="p-3">Temp</th>
+                        <th class="p-3">Rain</th>
+                        <th class="p-3">Yield</th>
+                        <th class="p-3">Date</th>
+
+                    </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                    {% for row in recent_predictions %}
+
+                    <tr class="border-b hover:bg-gray-50">
+
+                        <td class="p-3">{{ row.user_email }}</td>
+                        <td class="p-3">{{ row.crop }}</td>
+                        <td class="p-3">{{ row.soil }}</td>
+                        <td class="p-3">{{ row.temperature }}</td>
+                        <td class="p-3">{{ row.rainfall }}</td>
+                        <td class="p-3">{{ row.predicted_yield }}</td>
+                        <td class="p-3">{{ row.created_at }}</td>
+
+                    </tr>
+
+                    {% endfor %}
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script>
+
+const predictionChart = document
+.getElementById('predictionChart');
+
+new Chart(predictionChart,{
+
+type:'line',
+
+data:{
+
+labels:[
+'Mon',
+'Tue',
+'Wed',
+'Thu',
+'Fri',
+'Sat',
+'Sun'
+],
+
+datasets:[{
+
+label:'Predictions',
+
+data:[12,19,15,30,20,40,32],
+
+borderWidth:3,
+
+tension:.4
+
+}]
+
+}
+
+});
+
+const cropChart = document
+.getElementById('cropChart');
+
+new Chart(cropChart,{
+
+type:'doughnut',
+
+data:{
+
+labels:[
+'Rice',
+'Wheat',
+'Maize',
+'Sugarcane'
+],
+
+datasets:[{
+
+data:[35,25,20,20]
+
+}]
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

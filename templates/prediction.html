@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Yield Prediction</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+
+<body class="bg-green-50">
+
+
+<!-- NAVBAR -->
+
+<nav class="bg-green-700 text-white shadow-lg">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+<h1 class="text-2xl font-bold">🌱 YieldVision</h1>
+
+<ul class="flex space-x-8 font-medium">
+<li><a href="{{ url_for('home') }}" class="hover:text-yellow-300">Home</a></li>
+<li><a href="{{ url_for('about') }}" class="hover:text-yellow-300">About</a></li>
+<li><a href="{{ url_for('prediction') }}" class="hover:text-yellow-300">Prediction</a></li>
+<li><a href="{{ url_for('recommendation') }}" class="hover:text-yellow-300">Recommendations</a></li>
+<li><a href="{{ url_for('feedback') }}" class="hover:text-yellow-300">Feedback</a></li>
+{% if 'user' in session %}
+    <li>
+        <a href="{{ url_for('logout') }}" class="hover:text-red-300">
+            Logout
+        </a>
+    </li>
+    <li class="text-yellow-300">Welcome! {{ session['user'] }}</li>
+
+{% else %}
+    <li>
+        <a href="{{ url_for('login') }}" class="hover:text-yellow-300">
+            Login
+        </a>
+    </li>
+    <li>
+        <a href="{{ url_for('register') }}" class="hover:text-yellow-300">
+            Register
+        </a>
+    </li>
+{% endif %}
+
+</ul>
+
+</div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<section class="h-64 flex items-center justify-center text-white text-center bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef')">
+
+<div class="bg-black bg-opacity-40 p-8 rounded-xl">
+
+<h1 class="text-4xl font-bold mb-2">
+AI Crop Yield Prediction
+</h1>
+
+<p class="text-lg">
+Predict crop productivity using soil and climate data
+</p>
+
+</div>
+
+</section>
+
+
+
+<!-- FORM SECTION -->
+
+<section class="max-w-2xl mx-auto mt-14">
+
+<div class="bg-white p-10 rounded-2xl shadow-xl border">
+
+<h2 class="text-2xl font-bold text-center text-green-800 mb-6">
+
+Enter Farming Details
+
+</h2>
+
+
+<form action="/predict" method="POST" class="space-y-5" >
+
+
+<!-- Crop -->
+
+<div>
+
+<label class="font-semibold">Select Crop</label>
+
+<select name="crop" class="input">
+
+<option>Select Crop</option>
+<option value="0">Rice</option>
+<option value="1">Wheat</option>
+<option value="2">Maize</option>
+<option value="3">Coffee</option>
+
+</select>
+
+</div>
+
+
+<!-- Soil -->
+
+<div>
+
+<label class="font-semibold">Soil Type</label>
+
+<select name="soil" class="input">
+
+<option>Soil Type</option>
+<option value="0">Clay</option>
+<option value="1">Sandy</option>
+<option value="2">Loamy</option>
+
+</select>
+
+</div>
+
+
+
+<!-- Temperature -->
+
+<div>
+
+<label class="font-semibold">Temperature (°C)</label>
+
+<input name="temp" type="number" placeholder="Example: 28" class="input">
+
+</div>
+
+
+
+<!-- Rainfall -->
+
+<div>
+
+<label class="font-semibold">Rainfall (mm)</label>
+
+<input name="rain" type="number" placeholder="Example: 120" class="input">
+
+</div>
+
+
+
+<!-- Fertilizer -->
+
+<div>
+
+<label class="font-semibold">Fertilizer Used</label>
+
+<select name="fertilizer" class="input">
+<option value="0">Select fertilizer</option>
+<option value="1">DAP</option>
+<option value="2">NPK</option>
+<option value="3">Organic Compost</option>
+</select>
+
+</div>
+
+
+
+<button class="w-full bg-green-700 text-white py-3 rounded-lg text-lg font-semibold hover:bg-green-800 transition">
+
+Predict Yield
+
+</button>
+
+</form>
+    {% if result %}
+    <h3>Predicted Crop Yield: {{ result }}</h3>
+    {% endif %}
+
+</div>
+
+</section>
+
+
+
+<!-- EDUCATION SECTION -->
+
+<section class="max-w-6xl mx-auto mt-20 px-6">
+
+<h2 class="text-3xl font-bold text-center text-green-800 mb-10">
+
+How YieldVision Helps Farmers
+
+</h2>
+
+
+<div class="grid md:grid-cols-3 gap-8">
+
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌾 Smart Yield Prediction</h3>
+
+<p>
+YieldVision analyzes environmental factors like soil,
+rainfall, and temperature to predict crop yield
+accurately using Artificial Intelligence.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">📊 Data Driven Farming</h3>
+
+<p>
+Farmers can make better decisions by understanding
+how weather conditions and soil nutrients
+affect crop production.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌱 Better Productivity</h3>
+
+<p>
+The system helps farmers increase productivity
+by providing useful insights about crop
+growth conditions.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="bg-green-900 text-white text-center p-6 mt-20">
+
+<p>© 2026 YieldVision | Smart Agriculture Platform</p>
+
+</footer>
+
+
+</body>
+</html>

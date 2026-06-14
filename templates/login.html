@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+</head>
+
+<body class="flex items-center justify-center h-screen bg-gradient-to-br
+from-emerald-300 via-sky-200 to-yellow-200">
+
+<div class="flex w-[800px] shadow-lg rounded-lg overflow-hidden">
+
+<!-- LEFT PANEL -->
+<div class="bg-gradient-to-br from-emerald-700 via-green-500 to-yellow-300
+text-white w-1/2 p-10 flex flex-col justify-between shadow-2xl">
+    <div>
+        <h2 class="text-3xl font-bold mb-4">Login</h2>
+        <p class="text-sm">
+            Get access to your YieldVision dashboard, crop insights,
+            and smart farming tools.
+        </p>
+    </div>
+
+    <img src="../static/growth.png"  class="w-40 mx-auto">
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="bg-white w-1/2 p-10">
+
+<form method="POST" class="space-y-6">
+
+<input type="email" name="email" placeholder="Enter Email"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2">
+
+<input type="password" name="password" placeholder="Enter Password"
+class="w-full border-b-2 border-gray-300 focus:outline-none focus:border-blue-600 py-2">
+
+<button class="bg-yellow-400 w-full py-3 font-bold rounded hover:bg-yellow-500">
+Login
+</button>
+
+</form>
+
+<p class="text-center text-sm mt-2">
+    <a href="{{ url_for('forgot_password') }}" class="text-blue-600 font-bold">
+        Forgot Password?
+    </a>
+</p>
+
+<p class="text-center text-sm mt-6">
+New to YieldVision?
+<a href="{{ url_for('register') }}" class="text-blue-600 font-bold ">
+Create an account
+</a>
+</p>
+<p class="text-center text-sm mt-6">
+If you are admin ?
+<a href="{{ url_for('admin_login') }}"
+class="text-blue-600 font-bold">
+Admin Login
+</a>
+</p>
+</div>
+
+</div>
+
+</body>
+</html>

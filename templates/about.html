@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>About YieldVision</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body class="bg-green-50">
+
+<!-- Navbar -->
+
+<nav class="bg-green-700 text-white shadow-lg">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+<h1 class="text-2xl font-bold">🌱 YieldVision</h1>
+
+<ul class="flex space-x-8 font-medium">
+<li><a href="{{ url_for('home') }}" class="hover:text-yellow-300">Home</a></li>
+<li><a href="{{ url_for('about') }}" class="hover:text-yellow-300">About</a></li>
+<li><a href="{{ url_for('prediction') }}" class="hover:text-yellow-300">Prediction</a></li>
+<li><a href="{{ url_for('recommendation') }}" class="hover:text-yellow-300">Recommendations</a></li>
+<li><a href="{{ url_for('feedback') }}" class="hover:text-yellow-300">Feedback</a></li>
+{% if 'user' in session %}
+    <li>
+        <a href="{{ url_for('logout') }}" class="hover:text-red-300">
+            Logout
+        </a>
+    </li>
+    <li class="text-yellow-300">Welcome! {{ session['user'] }}</li>
+
+{% else %}
+    <li>
+        <a href="{{ url_for('login') }}" class="hover:text-yellow-300">
+            Login
+        </a>
+    </li>
+    <li>
+        <a href="{{ url_for('register') }}" class="hover:text-yellow-300">
+            Register
+        </a>
+    </li>
+{% endif %}
+
+</ul>
+</div>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="h-80 flex items-center justify-center text-center text-white bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6')">
+
+<div class="bg-black bg-opacity-40 p-8 rounded-xl">
+
+<h1 class="text-4xl font-bold mb-3">
+About YieldVision
+</h1>
+
+<p class="text-lg">
+Supporting farmers with smart agricultural insights
+</p>
+
+</div>
+
+</section>
+
+
+<!-- About Content -->
+
+<section class="max-w-6xl mx-auto mt-16 px-6">
+
+<div class="grid md:grid-cols-2 gap-12 items-center">
+
+<div>
+
+<h2 class="text-3xl font-bold text-green-800 mb-4">
+Our Mission
+</h2>
+
+<p class="text-gray-700 mb-4">
+YieldVision is designed to support farmers by providing
+valuable insights about crop growth and farming practices.
+Agriculture depends on many factors such as soil health,
+weather conditions, and irrigation management.
+</p>
+
+<p class="text-gray-700">
+Our mission is to help farmers understand these factors
+and make better farming decisions to improve crop yield
+and sustainability.
+</p>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9"
+class="rounded-xl shadow-lg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Key Benefits -->
+
+<section class="max-w-6xl mx-auto mt-20 px-6 text-center">
+
+<h2 class="text-3xl font-bold text-green-800 mb-10">
+How YieldVision Helps Farmers
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌾 Better Crop Understanding</h3>
+
+<p>
+Farmers can understand how environmental conditions
+influence crop growth and productivity.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌦 Climate Awareness</h3>
+
+<p>
+Weather conditions such as rainfall and temperature
+play a major role in crop yield.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌱 Sustainable Farming</h3>
+
+<p>
+Encouraging sustainable farming practices helps
+maintain soil fertility and long-term productivity.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Farmer Education -->
+
+<section class="max-w-6xl mx-auto mt-20 px-6">
+
+<h2 class="text-3xl font-bold text-center text-green-800 mb-10">
+Empowering Farmers with Knowledge
+</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+💧 Water Management
+</h3>
+
+<p>
+Proper irrigation helps maintain soil moisture
+and ensures healthy crop development.
+Farmers should avoid excessive watering
+to prevent crop damage.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+🌿 Soil Care
+</h3>
+
+<p>
+Healthy soil contains essential nutrients that
+support crop growth. Regular soil testing can
+help farmers maintain soil quality.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Footer -->
+
+<footer class="bg-green-900 text-white text-center p-6 mt-20">
+
+<p>
+© 2026 YieldVision | Smart Agriculture Support System
+</p>
+
+</footer>
+
+</body>
+</html>

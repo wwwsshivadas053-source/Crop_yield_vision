@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>YieldVision</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
+
+</head>
+
+<body class="bg-green-50">
+
+<!-- Navbar -->
+
+<nav class="bg-green-700 text-white shadow-lg">
+
+<div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+
+<h1 class="text-2xl font-bold">🌱 YieldVision</h1>
+
+<ul class="flex space-x-8 font-medium">
+<li><a href="{{ url_for('home') }}" class="hover:text-yellow-300">Home</a></li>
+<li><a href="{{ url_for('about') }}" class="hover:text-yellow-300">About</a></li>
+<li><a href="{{ url_for('prediction') }}" class="hover:text-yellow-300">Prediction</a></li>
+<li><a href="{{ url_for('recommendation') }}" class="hover:text-yellow-300">Recommendations</a></li>
+<li><a href="{{ url_for('feedback') }}" class="hover:text-yellow-300">Feedback</a></li>
+{% if 'user' in session %}
+    <li>
+        <a href="{{ url_for('logout') }}" class="hover:text-red-300">
+            Logout
+        </a>
+    </li>
+    <li class="text-yellow-300">Welcome! {{ session['user'] }}</li>
+
+{% else %}
+    <li>
+        <a href="{{ url_for('login') }}" class="hover:text-yellow-300">
+            Login
+        </a>
+    </li>
+    <li>
+        <a href="{{ url_for('register') }}" class="hover:text-yellow-300">
+            Register
+        </a>
+    </li>
+{% endif %}
+
+</ul>
+</ul>
+
+</div>
+
+</nav>
+
+
+<!-- Hero Section -->
+
+<section class="h-screen flex items-center justify-center text-center text-white bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef');">
+
+<div class="bg-black bg-opacity-40 p-10 rounded-xl">
+
+<h1 class="text-5xl font-bold mb-6">
+Smart Farming with YieldVision
+</h1>
+
+<p class="text-xl mb-6 max-w-2xl mx-auto">
+YieldVision helps farmers understand crop conditions,
+predict future yield, and improve productivity using
+data driven agricultural insights.
+</p>
+
+<a href="{{ url_for('prediction') }}"
+class="bg-yellow-500 px-8 py-3 text-lg rounded-lg hover:bg-yellow-600">
+
+Start Prediction
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- Why YieldVision -->
+
+<section class="max-w-6xl mx-auto mt-16 px-6 text-center">
+
+<h2 class="text-3xl font-bold text-green-800 mb-10">
+Why Farmers Use YieldVision
+</h2>
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌦 Weather Awareness</h3>
+
+<p>
+Understanding rainfall and temperature patterns
+helps farmers decide the best time for planting,
+irrigation, and harvesting.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌱 Soil Health Knowledge</h3>
+
+<p>
+Healthy soil is the foundation of successful farming.
+Farmers can learn how soil nutrients and moisture
+affect crop growth.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">🌾 Better Crop Planning</h3>
+
+<p>
+Planning crops based on environmental conditions
+can increase productivity and reduce farming risks.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Farmer Education -->
+
+<section class="max-w-6xl mx-auto mt-20 px-6">
+
+<h2 class="text-3xl font-bold text-center text-green-800 mb-10">
+Farmer Knowledge Center
+</h2>
+
+<div class="grid md:grid-cols-2 gap-10">
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+💧 Importance of Proper Irrigation
+</h3>
+
+<p>
+Efficient irrigation helps maintain soil moisture
+and supports healthy crop growth. Farmers should
+water crops early morning or evening to reduce
+water evaporation.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+🌿 Fertilizer Management
+</h3>
+
+<p>
+Balanced fertilizer use improves soil fertility
+and helps crops grow stronger. Organic compost
+can also improve long-term soil health.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+🐛 Pest Monitoring
+</h3>
+
+<p>
+Regular crop inspection allows farmers to detect
+pests and diseases early, preventing major
+damage to crops.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3 class="text-xl font-bold mb-3">
+🌾 Sustainable Farming
+</h3>
+
+<p>
+Using sustainable farming practices such as crop
+rotation and organic fertilizers can protect soil
+fertility and increase long-term productivity.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- Call to Action -->
+
+<section class="bg-green-700 text-white text-center py-16 mt-20">
+
+<h2 class="text-3xl font-bold mb-4">
+Start Improving Your Crop Yield Today
+</h2>
+
+<p class="mb-6">
+Use YieldVision to understand your crops and
+make smarter farming decisions.
+</p>
+
+<a href="{{ url_for('prediction') }}"
+class="bg-yellow-500 px-8 py-3 rounded-lg text-lg hover:bg-yellow-600">
+
+Predict Your Crop Yield
+
+</a>
+
+</section>
+
+
+
+<!-- Footer -->
+
+<footer class="bg-green-900 text-white text-center p-6">
+
+<p>
+© 2026 YieldVision | Smart Agriculture Support System
+</p>
+
+</footer>
+
+
+</body>
+</html>

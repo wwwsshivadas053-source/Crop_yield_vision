@@ -1,0 +1,6 @@
+Flask
+Werkzeug
+Flask-Mail
+numpy
+gunicorn
+scikit-learn

@@ -1,0 +1,121 @@
+Crop,Soil,Temperature_C,Rainfall_mm,Fertilizer_Used,Yield
+Coffee,Clay,18,62,NPK,3.5
+Coffee,Sandy,21,177,Organic Compost,5.8
+Maize,Loamy,32,222,NPK,4.93
+Coffee,Loamy,22,200,Vermicompost,4.39
+Rice,Loamy,22,226,DAP,2.62
+Wheat,Clay,32,263,Urea,2.62
+Coffee,Loamy,29,290,NPK,2.23
+Rice,Loamy,21,140,Vermicompost,5.46
+Maize,Sandy,21,108,NPK,4.4
+Coffee,Loamy,18,105,DAP,4.83
+Wheat,Clay,31,151,Vermicompost,2.08
+Wheat,Sandy,34,96,NPK,5.88
+Rice,Clay,23,71,NPK,5.33
+Wheat,Sandy,33,73,Urea,2.85
+Coffee,Loamy,28,175,Vermicompost,2.73
+Wheat,Loamy,30,135,Urea,2.73
+Coffee,Loamy,26,79,Urea,3.22
+Coffee,Clay,33,80,Urea,4.1
+Maize,Clay,18,156,Organic Compost,3.73
+Coffee,Loamy,23,249,Urea,3.16
+Rice,Sandy,30,215,Urea,4.45
+Coffee,Clay,26,287,Urea,2.56
+Coffee,Sandy,28,121,NPK,3.17
+Maize,Sandy,28,235,Vermicompost,3.47
+Coffee,Clay,30,268,Urea,3.82
+Coffee,Loamy,20,162,DAP,5.14
+Rice,Sandy,24,83,DAP,2.8
+Maize,Loamy,20,149,Vermicompost,4.06
+Maize,Clay,19,72,NPK,4.37
+Coffee,Loamy,26,137,Vermicompost,2.19
+Rice,Sandy,35,219,Urea,4.43
+Wheat,Loamy,23,106,Vermicompost,2.68
+Rice,Loamy,24,278,Vermicompost,2.26
+Coffee,Sandy,32,195,Urea,5.8
+Rice,Loamy,31,54,Organic Compost,5.86
+Rice,Clay,27,250,Organic Compost,5.23
+Maize,Sandy,21,185,Vermicompost,3.22
+Maize,Clay,24,293,NPK,2.39
+Rice,Clay,24,109,NPK,4.74
+Wheat,Clay,19,85,Vermicompost,3.76
+Wheat,Loamy,19,146,Vermicompost,2.49
+Rice,Sandy,30,163,Vermicompost,3.98
+Coffee,Loamy,27,76,Urea,2.14
+Rice,Loamy,31,217,NPK,5.64
+Maize,Loamy,19,298,Organic Compost,3.04
+Coffee,Clay,25,127,NPK,4.65
+Rice,Sandy,24,178,NPK,3.25
+Coffee,Sandy,21,298,Urea,4.08
+Rice,Sandy,25,123,Vermicompost,4.19
+Wheat,Clay,18,178,Vermicompost,2.74
+Maize,Sandy,35,55,Vermicompost,5.88
+Maize,Loamy,24,294,NPK,5.1
+Rice,Loamy,18,182,DAP,5.76
+Maize,Loamy,25,283,DAP,5.58
+Coffee,Sandy,19,261,Urea,4.39
+Coffee,Loamy,32,94,NPK,5.69
+Rice,Loamy,33,103,NPK,2.35
+Wheat,Clay,34,170,Vermicompost,2.78
+Wheat,Clay,18,59,DAP,2.18
+Maize,Sandy,25,238,Urea,3.3
+Coffee,Clay,24,135,Organic Compost,3.55
+Coffee,Loamy,34,137,Organic Compost,3.09
+Rice,Clay,21,235,NPK,5.31
+Rice,Loamy,32,71,Urea,3.43
+Coffee,Loamy,25,232,Urea,3.12
+Rice,Clay,29,219,Vermicompost,4.17
+Coffee,Sandy,29,297,NPK,2.56
+Coffee,Loamy,19,234,Vermicompost,5.21
+Maize,Loamy,20,149,Urea,2.3
+Coffee,Clay,28,258,Organic Compost,5.95
+Rice,Loamy,28,298,NPK,5.09
+Coffee,Loamy,33,207,Vermicompost,2.79
+Wheat,Loamy,31,77,Organic Compost,2.02
+Maize,Loamy,25,203,DAP,5.26
+Rice,Sandy,26,77,Vermicompost,4.83
+Coffee,Loamy,28,128,Organic Compost,4.92
+Wheat,Clay,23,247,Vermicompost,5.09
+Wheat,Loamy,33,166,Vermicompost,2.3
+Wheat,Clay,34,59,Vermicompost,3.43
+Maize,Clay,33,299,Organic Compost,2.46
+Wheat,Loamy,18,143,Vermicompost,5.45
+Coffee,Clay,33,282,Organic Compost,4.49
+Wheat,Loamy,23,183,Vermicompost,3.32
+Wheat,Loamy,34,109,DAP,2.25
+Wheat,Clay,23,120,Organic Compost,3.24
+Rice,Clay,32,210,Vermicompost,3.3
+Rice,Loamy,28,97,Urea,4.92
+Maize,Loamy,35,144,Vermicompost,4.55
+Rice,Sandy,26,209,NPK,5.55
+Maize,Sandy,20,170,Urea,3.89
+Maize,Loamy,25,163,Vermicompost,2.48
+Rice,Sandy,19,296,Vermicompost,4.85
+Maize,Clay,34,56,DAP,5.04
+Coffee,Loamy,30,209,NPK,4.25
+Coffee,Loamy,23,87,Organic Compost,5.08
+Maize,Sandy,33,268,Vermicompost,3.98
+Maize,Clay,20,52,Vermicompost,4.09
+Coffee,Clay,27,102,NPK,3.71
+Wheat,Sandy,19,122,DAP,2.1
+Maize,Sandy,22,225,NPK,2.43
+Maize,Loamy,30,290,Organic Compost,2.13
+Coffee,Clay,23,123,DAP,4.55
+Coffee,Clay,34,144,Organic Compost,3.26
+Wheat,Loamy,33,196,DAP,4.03
+Maize,Sandy,32,219,Urea,5.63
+Maize,Clay,31,151,Urea,3.0
+Coffee,Sandy,26,197,NPK,3.64
+Maize,Clay,26,187,DAP,5.02
+Wheat,Loamy,35,102,Urea,2.92
+Maize,Sandy,34,94,Vermicompost,2.31
+Coffee,Loamy,19,69,Vermicompost,3.16
+Maize,Sandy,31,52,Vermicompost,2.64
+Coffee,Clay,33,84,DAP,5.72
+Coffee,Loamy,31,244,Vermicompost,5.23
+Coffee,Clay,31,93,DAP,4.53
+Wheat,Loamy,24,62,NPK,5.49
+Rice,Clay,34,224,Organic Compost,5.21
+Maize,Clay,27,124,NPK,2.75
+Coffee,Loamy,24,116,Urea,5.57
+Maize,Sandy,32,274,Urea,4.16

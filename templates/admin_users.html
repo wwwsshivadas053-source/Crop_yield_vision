@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Users</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+<div class="flex min-h-screen">
+
+<!-- SIDEBAR -->
+
+<div class="w-72 bg-green-800 text-white">
+
+<div class="p-6 text-3xl font-bold">
+🌱 YieldVision
+</div>
+
+<nav class="p-5">
+
+<a href="/admin/dashboard"
+class="block p-3 hover:bg-green-900 rounded">
+Dashboard
+</a>
+
+<a href="/admin/users"
+class="block p-3 bg-green-900 rounded">
+Users
+</a>
+
+<a href="/admin/predictions"
+class="block p-3 hover:bg-green-900 rounded">
+Predictions
+</a>
+
+<a href="/admin/feedback"
+class="block p-3 hover:bg-green-900 rounded">
+Feedback
+</a>
+
+<a href="/admin/logout"
+class="block p-3 bg-red-600 mt-8 rounded">
+Logout
+</a>
+
+</nav>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="flex-1 p-8">
+
+<h1 class="text-4xl font-bold mb-6">
+Users Management
+</h1>
+
+<div class="bg-white rounded-2xl shadow overflow-hidden">
+
+<table class="w-full">
+
+<thead class="bg-green-700 text-white">
+
+<tr>
+
+<th class="p-4">ID</th>
+<th class="p-4">Name</th>
+<th class="p-4">Email</th>
+<th class="p-4">Phone</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for user in users %}
+
+<tr class="border-b hover:bg-gray-50">
+
+<td class="p-4">{{ user.id }}</td>
+<td class="p-4">{{ user.name }}</td>
+<td class="p-4">{{ user.email }}</td>
+<td class="p-4">{{ user.phone_number }}</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
