@@ -10,9 +10,7 @@ import pickle
 import numpy as np
 import random
 import os
-from google import genai
 from flask import jsonify
-from dotenv import load_dotenv
 
 
 
