@@ -207,15 +207,15 @@ def register():
 
     if request.method == "POST":
 
-        name = request.form["name"]
+        name = request.form.get["name"]
 
-        email = request.form["email"]
+        email = request.form.get["email"]
 
-        phone_number = request.form["phone_number"]
+        phone_number = request.form.get["phone_number"]
 
-        password = request.form["password"]
+        password = request.form.get["password"]
 
-        confirm_password = request.form["confirm_password"]
+        confirm_password = request.form.get["confirm_password"]
 
         if password != confirm_password:
 
