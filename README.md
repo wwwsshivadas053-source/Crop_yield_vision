@@ -1,120 +1,116 @@
-# 🌾 YieldVision AI – Smart Crop Yield Prediction System
+# 🌾 Crop Yield Prediction & Recommendation System
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg">
-  <img src="https://img.shields.io/badge/Flask-Web%20Framework-green.svg">
-  <img src="https://img.shields.io/badge/Machine%20Learning-Scikit--Learn-orange.svg">
-  <img src="https://img.shields.io/badge/SQLite-Database-blue.svg">
-  <img src="https://img.shields.io/badge/License-MIT-success.svg">
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web_Framework-black?style=for-the-badge&logo=flask)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
 </p>
 
-> **YieldVision AI** is a Machine Learning-powered Crop Yield Prediction System that helps farmers, researchers, and agricultural professionals estimate crop yield based on environmental and agricultural factors. The application combines predictive analytics, secure authentication, AI-powered agricultural assistance, and an interactive dashboard into a modern web platform.
+> An intelligent **Crop Yield Prediction & Recommendation System** powered by **Machine Learning**, **Flask**, and **Google Gemini AI**. The application predicts crop yield using agricultural parameters and provides AI-generated farming recommendations to help farmers and researchers make data-driven decisions.
 
 ---
 
-# 📖 Overview
+# 📌 Table of Contents
 
-Agricultural productivity depends on numerous environmental and farming parameters. Predicting crop yield accurately enables farmers to make informed decisions regarding crop selection, fertilizer usage, irrigation planning, and resource management.
+- Overview
+- Features
+- Tech Stack
+- Project Structure
+- Machine Learning Model
+- Installation
+- Environment Variables
+- Running the Application
+- Application Workflow
+- Screenshots
+- Future Enhancements
+- Deployment
+- Contributing
+- License
 
-YieldVision AI utilizes a trained Machine Learning model to predict expected crop yield using user-provided agricultural data. The system also integrates AI-powered crop recommendations, user management, feedback collection, and an administrator dashboard.
+---
+
+# 🌱 Overview
+
+Agriculture plays a significant role in the global economy. Predicting crop yield accurately enables farmers to optimize cultivation strategies, improve productivity, and efficiently manage available resources.
+
+This project combines **Machine Learning**, **Flask**, **SQLite**, and **Google Gemini AI** to deliver a complete smart agriculture solution with:
+
+- Crop Yield Prediction
+- AI Crop Recommendation
+- Secure User Authentication
+- Admin Dashboard
+- Prediction History
+- Feedback Management
 
 ---
 
 # ✨ Features
 
-## 👤 User Features
+## 👨‍🌾 User Features
 
 - User Registration
-- Secure Login System
-- Password Hashing
-- Forgot Password with OTP Verification
+- Secure Login
+- Forgot Password (OTP Verification)
 - Password Reset
 - User Dashboard
 - Crop Yield Prediction
-- Crop Recommendation
-- AI Agricultural Assistant
+- AI Crop Recommendation
 - Prediction History
 - Feedback Submission
-- Responsive UI
+- Responsive Interface
 
 ---
 
-## 🤖 Machine Learning Features
+## 🤖 AI Features
+
+- Google Gemini AI Integration
+- Smart Crop Recommendation
+- Farming Guidance
+- Agricultural Best Practices
+- Irrigation Suggestions
+- Fertilizer Recommendations
+- Soil Improvement Advice
+
+---
+
+## 📈 Machine Learning
 
 - Crop Yield Prediction
-- Trained ML Model
+- Trained Regression Model
 - Label Encoding
-- Real-time Prediction
-- High-Speed Inference
 - Data Preprocessing
-- Numerical Feature Processing
-- Encoded Categorical Variables
-
----
-
-## 🧠 AI Features
-
-- AI-powered Crop Recommendation
-- Agricultural Guidance
-- Farming Tips
-- Smart Suggestions
-- Gemini AI Integration
-- Interactive Chat Responses
+- Fast Predictions
+- Scikit-Learn Model Serialization
 
 ---
 
 ## 🔐 Authentication
 
-- Secure Password Storage
 - Password Hashing
-- OTP Verification
-- Email-Based Password Recovery
-- Session Management
-- Protected Routes
-
----
-
-## 📊 Admin Panel
-
-Administrator can manage:
-
-- Registered Users
-- Prediction Records
-- User Feedback
+- Secure Sessions
+- OTP Password Recovery
+- Protected User Routes
 - Admin Authentication
-- Dashboard Statistics
 
 ---
 
-# 🖥️ Screens
+## 👨‍💼 Admin Panel
 
-- Login
-- Registration
-- Dashboard
-- Crop Prediction
-- Crop Recommendation
-- Forgot Password
-- OTP Verification
-- Password Reset
-- Feedback
-- Admin Login
-- Admin Dashboard
-- Users Management
-- Prediction Management
-- Feedback Management
+Administrator can:
+
+- View Registered Users
+- Monitor Crop Predictions
+- View User Feedback
+- Dashboard Analytics
+- Manage Application Data
 
 ---
 
-# 🛠️ Technology Stack
-
-## Backend
-
-- Python
-- Flask
-- SQLite
-- Flask-Mail
-- Google Gemini API
-- Pickle
+# 🛠 Technology Stack
 
 ## Frontend
 
@@ -122,65 +118,148 @@ Administrator can manage:
 - CSS3
 - JavaScript
 
+---
+
+## Backend
+
+- Python
+- Flask
+- SQLite
+- Flask-Mail
+- Werkzeug
+
+---
+
 ## Machine Learning
 
 - Scikit-Learn
 - NumPy
-- Pickle Serialization
+- Pickle
 
-## Database
+---
 
-- SQLite
+## AI
+
+- Google Gemini API
 
 ---
 
 # 📂 Project Structure
 
 ```
-YieldVisionAI/
+crop/
 │
 ├── app.py
+├── database.db
 ├── model.pkl
 ├── crop_encoder.pkl
-├── fertilizer_encoder.pkl
 ├── soil_encoder.pkl
+├── fertilizer_encoder.pkl
 ├── crop_yield.csv
-├── database.db
 ├── requirements.txt
 ├── Procfile
 ├── runtime.txt
-│
-├── templates/
-│   ├── login.html
-│   ├── register.html
-│   ├── dashboard.html
-│   ├── prediction.html
-│   ├── recommendation.html
-│   ├── feedback.html
-│   ├── admin_dashboard.html
-│   ├── admin_users.html
-│   ├── admin_predictions.html
-│   ├── admin_feedback.html
-│   └── ...
 │
 ├── static/
 │   ├── style.css
 │   ├── dashboard.js
 │   └── growth.png
 │
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── prediction.html
+│   ├── recommendation.html
+│   ├── feedback.html
+│   ├── forgot_password.html
+│   ├── verify_otp.html
+│   ├── reset_password.html
+│   ├── admin_login.html
+│   ├── admin_dashboard.html
+│   ├── admin_users.html
+│   ├── admin_predictions.html
+│   ├── admin_feedback.html
+│   └── about.html
+│
 └── README.md
 ```
 
 ---
 
-# ⚙️ Installation
+# ⚙️ Machine Learning Workflow
+
+```
+User Input
+      │
+      ▼
+Data Validation
+      │
+      ▼
+Feature Encoding
+      │
+      ▼
+Machine Learning Model
+      │
+      ▼
+Yield Prediction
+      │
+      ▼
+Gemini AI Recommendation
+      │
+      ▼
+Display Results
+```
+
+---
+
+# 📊 Prediction Parameters
+
+The prediction model uses agricultural inputs such as:
+
+- Crop Type
+- Soil Type
+- Fertilizer Type
+- Temperature
+- Rainfall
+
+The trained Machine Learning model estimates the expected crop yield based on these parameters.
+
+---
+
+# 🤖 AI Crop Recommendation
+
+After prediction, Google Gemini AI provides intelligent recommendations including:
+
+- Suitable Crops
+- Fertilizer Advice
+- Soil Health Tips
+- Irrigation Suggestions
+- Pest Prevention Tips
+- Farming Best Practices
+
+---
+
+# 🔐 Security Features
+
+- Password Hashing
+- OTP Verification
+- Session Management
+- Protected Routes
+- Input Validation
+- SQL Injection Prevention
+
+---
+
+# 🚀 Installation
 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/YieldVisionAI.git
+git clone https://github.com/yourusername/crop-yield-prediction.git
 
-cd YieldVisionAI
+cd crop-yield-prediction
 ```
 
 ---
@@ -195,7 +274,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux / Mac
+### Linux / macOS
 
 ```bash
 python3 -m venv venv
@@ -215,7 +294,7 @@ pip install -r requirements.txt
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the project directory.
+Create a `.env` file.
 
 ```env
 SECRET_KEY=your_secret_key
@@ -224,20 +303,20 @@ GEMINI_API_KEY=your_gemini_api_key
 
 MAIL_USERNAME=your_email@gmail.com
 
-MAIL_PASSWORD=your_app_password
+MAIL_PASSWORD=your_gmail_app_password
 ```
 
-> **Important:** Never hardcode API keys, email passwords, or secret keys into your source code. Store them securely using environment variables.
+> Never expose API keys or email passwords in your source code.
 
 ---
 
-# ▶️ Run the Application
+# ▶️ Running the Project
 
 ```bash
 python app.py
 ```
 
-Open your browser:
+Open:
 
 ```
 http://127.0.0.1:5000
@@ -245,19 +324,222 @@ http://127.0.0.1:5000
 
 ---
 
-# 📈 Crop Yield Prediction Workflow
+# 👨‍💻 Admin Login
+
+Default Administrator Credentials
 
 ```
-User Login
+Username : admin
+
+Password : admin123
+```
+
+**Change the default credentials before deploying the application to production.**
+
+---
+
+# 📷 Screenshots
+
+# 🌾 Crop Yield Prediction & Recommendation System
+
+<p align="center">
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Flask](https://img.shields.io/badge/Flask-Web_Framework-black?style=for-the-badge&logo=flask)
+![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange?style=for-the-badge)
+![SQLite](https://img.shields.io/badge/SQLite-Database-blue?style=for-the-badge&logo=sqlite)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</p>
+
+> An intelligent **Crop Yield Prediction & Recommendation System** powered by **Machine Learning**, **Flask**, and **Google Gemini AI**. The application predicts crop yield using agricultural parameters and provides AI-generated farming recommendations to help farmers and researchers make data-driven decisions.
+
+---
+
+# 📌 Table of Contents
+
+- Overview
+- Features
+- Tech Stack
+- Project Structure
+- Machine Learning Model
+- Installation
+- Environment Variables
+- Running the Application
+- Application Workflow
+- Screenshots
+- Future Enhancements
+- Deployment
+- Contributing
+- License
+
+---
+
+# 🌱 Overview
+
+Agriculture plays a significant role in the global economy. Predicting crop yield accurately enables farmers to optimize cultivation strategies, improve productivity, and efficiently manage available resources.
+
+This project combines **Machine Learning**, **Flask**, **SQLite**, and **Google Gemini AI** to deliver a complete smart agriculture solution with:
+
+- Crop Yield Prediction
+- AI Crop Recommendation
+- Secure User Authentication
+- Admin Dashboard
+- Prediction History
+- Feedback Management
+
+---
+
+# ✨ Features
+
+## 👨‍🌾 User Features
+
+- User Registration
+- Secure Login
+- Forgot Password (OTP Verification)
+- Password Reset
+- User Dashboard
+- Crop Yield Prediction
+- AI Crop Recommendation
+- Prediction History
+- Feedback Submission
+- Responsive Interface
+
+---
+
+## 🤖 AI Features
+
+- Google Gemini AI Integration
+- Smart Crop Recommendation
+- Farming Guidance
+- Agricultural Best Practices
+- Irrigation Suggestions
+- Fertilizer Recommendations
+- Soil Improvement Advice
+
+---
+
+## 📈 Machine Learning
+
+- Crop Yield Prediction
+- Trained Regression Model
+- Label Encoding
+- Data Preprocessing
+- Fast Predictions
+- Scikit-Learn Model Serialization
+
+---
+
+## 🔐 Authentication
+
+- Password Hashing
+- Secure Sessions
+- OTP Password Recovery
+- Protected User Routes
+- Admin Authentication
+
+---
+
+## 👨‍💼 Admin Panel
+
+Administrator can:
+
+- View Registered Users
+- Monitor Crop Predictions
+- View User Feedback
+- Dashboard Analytics
+- Manage Application Data
+
+---
+
+# 🛠 Technology Stack
+
+## Frontend
+
+- HTML5
+- CSS3
+- JavaScript
+
+---
+
+## Backend
+
+- Python
+- Flask
+- SQLite
+- Flask-Mail
+- Werkzeug
+
+---
+
+## Machine Learning
+
+- Scikit-Learn
+- NumPy
+- Pickle
+
+---
+
+## AI
+
+- Google Gemini API
+
+---
+
+# 📂 Project Structure
+
+```
+crop/
+│
+├── app.py
+├── database.db
+├── model.pkl
+├── crop_encoder.pkl
+├── soil_encoder.pkl
+├── fertilizer_encoder.pkl
+├── crop_yield.csv
+├── requirements.txt
+├── Procfile
+├── runtime.txt
+│
+├── static/
+│   ├── style.css
+│   ├── dashboard.js
+│   └── growth.png
+│
+├── templates/
+│   ├── index.html
+│   ├── login.html
+│   ├── register.html
+│   ├── dashboard.html
+│   ├── prediction.html
+│   ├── recommendation.html
+│   ├── feedback.html
+│   ├── forgot_password.html
+│   ├── verify_otp.html
+│   ├── reset_password.html
+│   ├── admin_login.html
+│   ├── admin_dashboard.html
+│   ├── admin_users.html
+│   ├── admin_predictions.html
+│   ├── admin_feedback.html
+│   └── about.html
+│
+└── README.md
+```
+
+---
+
+# ⚙️ Machine Learning Workflow
+
+```
+User Input
       │
       ▼
-Dashboard
+Data Validation
       │
       ▼
-Enter Crop Details
-      │
-      ▼
-Preprocessing
+Feature Encoding
       │
       ▼
 Machine Learning Model
@@ -266,83 +548,295 @@ Machine Learning Model
 Yield Prediction
       │
       ▼
-Recommendation & Result
+Gemini AI Recommendation
+      │
+      ▼
+Display Results
 ```
 
 ---
 
-# 🧮 Prediction Parameters
+# 📊 Prediction Parameters
 
-The model predicts crop yield using inputs such as:
+The prediction model uses agricultural inputs such as:
 
 - Crop Type
 - Soil Type
+- Fertilizer Type
 - Temperature
 - Rainfall
-- Fertilizer Type
 
-The trained model processes these inputs to estimate the expected crop yield.
+The trained Machine Learning model estimates the expected crop yield based on these parameters.
 
 ---
 
 # 🤖 AI Crop Recommendation
 
-The integrated Gemini AI assists users by providing:
+After prediction, Google Gemini AI provides intelligent recommendations including:
 
-- Suitable crops
-- Farming advice
-- Agricultural best practices
-- Soil recommendations
-- Irrigation guidance
-- Fertilizer suggestions
-- Crop management tips
+- Suitable Crops
+- Fertilizer Advice
+- Soil Health Tips
+- Irrigation Suggestions
+- Pest Prevention Tips
+- Farming Best Practices
 
 ---
 
-# 🔒 Security Features
+# 🔐 Security Features
 
 - Password Hashing
-- Secure Authentication
-- Session Protection
-- OTP Password Recovery
+- OTP Verification
+- Session Management
+- Protected Routes
 - Input Validation
-- SQL Injection Protection
-- Protected Admin Routes
+- SQL Injection Prevention
 
 ---
 
-# 📊 Admin Dashboard
+# 🚀 Installation
 
-Administrators can:
+## Clone Repository
 
-- Monitor registered users
-- View crop prediction history
-- Review user feedback
-- Access dashboard analytics
-- Manage application records
+```bash
+git clone https://github.com/yourusername/crop-yield-prediction.git
+
+cd crop-yield-prediction
+```
 
 ---
 
-# 📸 Screenshots
+## Create Virtual Environment
 
-Add screenshots inside a folder named:
+### Windows
 
+```bash
+python -m venv venv
+
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+```
+
+---
+
+## Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🔑 Environment Variables
+
+Create a `.env` file.
+
+```env
+SECRET_KEY=your_secret_key
+
+GEMINI_API_KEY=your_gemini_api_key
+
+MAIL_USERNAME=your_email@gmail.com
+
+MAIL_PASSWORD=your_gmail_app_password
+```
+
+> Never expose API keys or email passwords in your source code.
+
+---
+
+# ▶️ Running the Project
+
+```bash
+python app.py
+```
+
+Open:
+
+```
+http://127.0.0.1:5000
+```
+
+---
+
+# 👨‍💻 Admin Login
+
+Default Administrator Credentials
+
+```
+Username : admin
+
+Password : admin123
+```
+
+**Change the default credentials before deploying the application to production.**
+
+---
+
+# 📷 Screenshots
+
+<img width="1364" height="637" alt="re" src="https://github.com/user-attachments/assets/fb192239-501d-4603-83ba-7500c4524d7f" />
+<img width="1366" height="637" alt="log" src="https://github.com/user-attachments/assets/013342ab-c8b6-4eb1-a741-8b5e2131956f" />
+<img width="1354" height="635" alt="hom" src="https://github.com/user-attachments/assets/4f85c515-d527-4947-b300-e8edbfc8b751" />
+<img width="1349" height="635" alt="abou" src="https://github.com/user-attachments/assets/7cc1e6a2-030c-48f4-9a92-8b942db72046" />
+<img width="1351" height="640" alt="Screenshot 2026-06-26 190135" src="https://github.com/user-attachments/assets/19601f16-dccc-4003-b53b-697385b1a6f9" />
+<img width="1349" height="640" alt="das" src="https://github.com/user-attachments/assets/5f5449f9-dedd-46fa-a6c4-fbd9af8da443" />
+<img width="1349" height="637" alt="recom" src="https://github.com/user-attachments/assets/947b789c-b2bb-4e85-a5f5-19179e513db3" />
+<img width="1347" height="641" alt="f1" src="https://github.com/user-attachments/assets/db2786a0-bcfc-44d0-9380-9a5cd9d84bee" />
+<img width="1348" height="621" alt="f2" src="https://github.com/user-attachments/assets/a6523b68-ce3f-4ac1-8771-2afd7e7ad624" />
+<img width="1366" height="634" alt="ad log" src="https://github.com/user-attachments/assets/1aa8ac03-03f4-4810-bf60-5a1e42ea4510" />
+<img width="1348" height="637" alt="ad dash" src="https://github.com/user-attachments/assets/40cc0546-538b-4b4a-a688-42d72f4d2861" />
+<img width="1350" height="636" alt="ad dash2" src="https://github.com/user-attachments/assets/6a4949f9-1f88-4c30-ac76-f889f858ac14" />
+<img width="1366" height="634" alt="predi" src="https://github.com/user-attachments/assets/4775f7d9-9c7b-4b23-8f82-c484583022e7" />
+<img width="1347" height="636" alt="ad feed" src="https://github.com/user-attachments/assets/a2afee9c-eb2e-44d9-8971-382f7c0cf6a6" />
+
+
+# 📦 Requirements
+
+Main libraries:
+
+```
+Flask
+
+Flask-Mail
+
+Werkzeug
+
+NumPy
+
+Scikit-Learn
+
+python-dotenv
+
+```
+
+Install:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+# 🌍 Deployment
+
+This project can be deployed on:
+
+- Render
+- Railway
+- PythonAnywhere
+- Azure App Service
+- Heroku
+- AWS Elastic Beanstalk
+- DigitalOcean
+
+---
+
+# 🚀 Future Enhancements
+
+- Weather API Integration
+- Fertilizer Prediction Model
+- Crop Disease Detection
+- Satellite Image Analysis
+- Interactive Analytics Dashboard
+- PDF Report Generation
+- Mobile Application
+- SMS Notifications
+- Voice Assistant
+- Multi-language Support
+- Cloud Database Integration
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository.
+
+2. Create your feature branch.
+
+```bash
+git checkout -b feature-name
+```
+
+3. Commit your changes.
+
+```bash
+git commit -m "Added new feature"
+```
+
+4. Push to your branch.
+
+```bash
+git push origin feature-name
+```
+
+5. Open a Pull Request.
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+**Prajwal T. S.**
+
+AI • Machine Learning • Python • Flask • Data Science
+
+GitHub: https://github.com/yourusername
+
+LinkedIn: https://linkedin.com/in/yourprofile
+
+---
+
+# ⭐ Show Your Support
+
+If you found this project useful,
+
+⭐ Star this repository
+
+🍴 Fork it
+
+💡 Share it with others
+
+🤝 Contribute to the project
+
+---
+
+# 🌾 Empowering Smart Agriculture with Artificial Intelligence.
 ```
 screenshots/
+
+login.png
+
+register.png
+
+dashboard.png
+
+prediction.png
+
+recommendation.png
+
+feedback.png
+
+admin_login.png
+
+admin_dashboard.png
 ```
 
-Example:
-
-```
-screenshots/
-├── login.png
-├── dashboard.png
-├── prediction.png
-├── recommendation.png
-├── admin_dashboard.png
-```
-
-Then include them:
+Use them inside README.
 
 ```markdown
 ## Login
@@ -360,48 +854,35 @@ Then include them:
 ## Recommendation
 
 ![Recommendation](screenshots/recommendation.png)
+
+## Admin Dashboard
+
+![Admin](screenshots/admin_dashboard.png)
 ```
 
 ---
 
-# 🚀 Future Improvements
+# 📦 Requirements
 
-- Weather API Integration
-- Satellite Data Analysis
-- Disease Detection
-- Fertilizer Recommendation Model
-- Soil Nutrient Analysis
-- Yield Forecast Charts
-- Multi-language Support
-- PDF Report Generation
-- Cloud Database Integration
-- Mobile Application
-- SMS Notifications
-- Farmer Community Portal
-
----
-
-# 📦 Dependencies
-
-Major libraries include:
+Main libraries:
 
 ```
 Flask
+
+Flask-Mail
+
+Werkzeug
 
 NumPy
 
 Scikit-Learn
 
-Flask-Mail
-
 python-dotenv
 
-google-genai
-
-Werkzeug
+google-generativeai
 ```
 
-Install them using:
+Install:
 
 ```bash
 pip install -r requirements.txt
@@ -411,49 +892,65 @@ pip install -r requirements.txt
 
 # 🌍 Deployment
 
-The project can be deployed on:
+This project can be deployed on:
 
 - Render
 - Railway
 - PythonAnywhere
 - Azure App Service
-- AWS Elastic Beanstalk
 - Heroku
+- AWS Elastic Beanstalk
 - DigitalOcean
+
+---
+
+# 🚀 Future Enhancements
+
+- Weather API Integration
+- Fertilizer Prediction Model
+- Crop Disease Detection
+- Satellite Image Analysis
+- Interactive Analytics Dashboard
+- PDF Report Generation
+- Mobile Application
+- SMS Notifications
+- Voice Assistant
+- Multi-language Support
+- Cloud Database Integration
 
 ---
 
 # 🤝 Contributing
 
-Contributions are welcome.
+Contributions are welcome!
 
-1. Fork the repository
+1. Fork the repository.
 
-2. Create a feature branch
+2. Create your feature branch.
 
 ```bash
 git checkout -b feature-name
 ```
 
-3. Commit changes
+3. Commit your changes.
 
 ```bash
 git commit -m "Added new feature"
 ```
 
-4. Push changes
+4. Push to your branch.
 
 ```bash
 git push origin feature-name
 ```
 
-5. Open a Pull Request
+5. Open a Pull Request.
 
 ---
 
-# 📝 License
+# 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License**.
 
 ---
 
@@ -461,9 +958,7 @@ This project is licensed under the MIT License.
 
 **Prajwal T. S.**
 
-AI & Machine Learning Enthusiast
-
-Python | Flask | Machine Learning | Data Science | Full Stack Development
+AI • Machine Learning • Python • Flask • Data Science
 
 GitHub: https://github.com/yourusername
 
@@ -471,15 +966,18 @@ LinkedIn: https://linkedin.com/in/yourprofile
 
 ---
 
-# ⭐ Support
+# ⭐ Show Your Support
 
-If you found this project useful:
+If you found this project useful,
 
-- ⭐ Star this repository
-- 🍴 Fork it
-- 🛠️ Contribute to improve it
-- 📢 Share it with others
+⭐ Star this repository
+
+🍴 Fork it
+
+💡 Share it with others
+
+🤝 Contribute to the project
 
 ---
 
-## 🌾 "Empowering Agriculture Through Artificial Intelligence."
+# 🌾 Empowering Smart Agriculture with Artificial Intelligence.
