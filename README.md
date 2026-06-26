@@ -340,59 +340,22 @@ Password : admin123
 
 # 📷 Screenshots
 
-Create a folder:
 
-```
-screenshots/
-```
+<img width="1364" height="637" alt="re" src="https://github.com/user-attachments/assets/fb192239-501d-4603-83ba-7500c4524d7f" />
+<img width="1366" height="637" alt="log" src="https://github.com/user-attachments/assets/013342ab-c8b6-4eb1-a741-8b5e2131956f" />
+<img width="1354" height="635" alt="hom" src="https://github.com/user-attachments/assets/4f85c515-d527-4947-b300-e8edbfc8b751" />
+<img width="1349" height="635" alt="abou" src="https://github.com/user-attachments/assets/7cc1e6a2-030c-48f4-9a92-8b942db72046" />
+<img width="1351" height="640" alt="Screenshot 2026-06-26 190135" src="https://github.com/user-attachments/assets/19601f16-dccc-4003-b53b-697385b1a6f9" />
+<img width="1349" height="640" alt="das" src="https://github.com/user-attachments/assets/5f5449f9-dedd-46fa-a6c4-fbd9af8da443" />
+<img width="1349" height="637" alt="recom" src="https://github.com/user-attachments/assets/947b789c-b2bb-4e85-a5f5-19179e513db3" />
+<img width="1347" height="641" alt="f1" src="https://github.com/user-attachments/assets/db2786a0-bcfc-44d0-9380-9a5cd9d84bee" />
+<img width="1348" height="621" alt="f2" src="https://github.com/user-attachments/assets/a6523b68-ce3f-4ac1-8771-2afd7e7ad624" />
+<img width="1366" height="634" alt="ad log" src="https://github.com/user-attachments/assets/1aa8ac03-03f4-4810-bf60-5a1e42ea4510" />
+<img width="1348" height="637" alt="ad dash" src="https://github.com/user-attachments/assets/40cc0546-538b-4b4a-a688-42d72f4d2861" />
+<img width="1350" height="636" alt="ad dash2" src="https://github.com/user-attachments/assets/6a4949f9-1f88-4c30-ac76-f889f858ac14" />
+<img width="1366" height="634" alt="predi" src="https://github.com/user-attachments/assets/4775f7d9-9c7b-4b23-8f82-c484583022e7" />
+<img width="1347" height="636" alt="ad feed" src="https://github.com/user-attachments/assets/a2afee9c-eb2e-44d9-8971-382f7c0cf6a6" />
 
-Example:
-
-```
-screenshots/
-
-login.png
-
-register.png
-
-dashboard.png
-
-prediction.png
-
-recommendation.png
-
-feedback.png
-
-admin_login.png
-
-admin_dashboard.png
-```
-
-Use them inside README.
-
-```markdown
-## Login
-
-![Login](screenshots/login.png)
-
-## Dashboard
-
-![Dashboard](screenshots/dashboard.png)
-
-## Prediction
-
-![Prediction](screenshots/prediction.png)
-
-## Recommendation
-
-![Recommendation](screenshots/recommendation.png)
-
-## Admin Dashboard
-
-![Admin](screenshots/admin_dashboard.png)
-```
-
----
 
 # 📦 Requirements
 
