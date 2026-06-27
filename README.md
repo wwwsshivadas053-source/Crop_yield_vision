@@ -455,7 +455,7 @@ This project is licensed under the **MIT License**.
 
 AI • Machine Learning • Python • Flask • Data Science
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/wwwsshivadas053-source
 
 LinkedIn: https://www.linkedin.com/in/prajwal-t-s-354a57359
 
