@@ -457,7 +457,7 @@ AI • Machine Learning • Python • Flask • Data Science
 
 GitHub: https://github.com/yourusername
 
-LinkedIn: https://linkedin.com/in/yourprofile
+LinkedIn: https://www.linkedin.com/in/prajwal-t-s-354a57359
 
 ---
 
